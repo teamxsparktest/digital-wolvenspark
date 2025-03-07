@@ -27,9 +27,23 @@ const Header = () => {
     { name: 'Supporters', href: '#supporters' },
   ];
   
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false);
+    }
+  };
+  
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
           ? 'bg-revenant-darker/80 backdrop-blur-md py-3 shadow-lg' 
           : 'bg-transparent py-6'
@@ -38,7 +52,11 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="#home" className="flex items-center">
+            <a 
+              href="#home" 
+              className="flex items-center"
+              onClick={(e) => handleNavClick(e, '#home')}
+            >
               <span className="text-xl font-bold tracking-wider neon-text">REVENANT</span>
               <span className="ml-1 text-xl font-bold tracking-wider yellow-neon-text">XSPARK</span>
             </a>
@@ -49,7 +67,8 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-white hover:neon-text transition-all duration-300 text-sm uppercase tracking-wider"
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="text-gray-300 hover:text-white hover:neon-text transition-all duration-500 text-sm uppercase tracking-wider"
               >
                 {link.name}
               </a>
@@ -70,7 +89,7 @@ const Header = () => {
       
       {/* Mobile menu */}
       <div 
-        className={`fixed inset-0 z-50 bg-revenant-darker/95 backdrop-blur-lg transform transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-0 z-50 bg-revenant-darker/95 backdrop-blur-lg transform transition-transform duration-500 ease-in-out ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -89,8 +108,8 @@ const Header = () => {
             <a
               key={link.name}
               href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-gray-300 hover:text-white hover:neon-text transition-all duration-300 text-2xl uppercase tracking-wider"
+              onClick={(e) => handleNavClick(e, link.href)}
+              className="text-gray-300 hover:text-white hover:neon-text transition-all duration-500 text-2xl uppercase tracking-wider"
             >
               {link.name}
             </a>

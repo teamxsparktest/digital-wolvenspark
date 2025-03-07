@@ -11,6 +11,7 @@ import StatisticsSection from '../components/StatisticsSection';
 import TournamentSection from '../components/TournamentSection';
 import OGSupportersSection from '../components/OGSupportersSection';
 import Footer from '../components/Footer';
+import ThunderBackground from '../components/ThunderBackground';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,7 +40,10 @@ const Index = () => {
   }
   
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden bg-revenant-purple-dark/30">
+      {/* Thunder background effect */}
+      <ThunderBackground />
+      
       {/* Fixed header */}
       <Header />
       
