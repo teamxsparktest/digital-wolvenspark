@@ -1,5 +1,5 @@
 
-import { Instagram, Twitter, Youtube, Discord } from 'lucide-react';
+import { Instagram, Twitter, Youtube, MessageSquare } from 'lucide-react';
 import { useScrollReveal } from '../utils/animationUtils';
 
 const CareerSection = () => {
@@ -36,7 +36,7 @@ const CareerSection = () => {
   
   // Social media links
   const socialLinks = [
-    { name: "Discord", icon: Discord, url: "#", color: "bg-[#5865F2]/10 border-[#5865F2]/30 text-[#5865F2]" },
+    { name: "Discord", icon: MessageSquare, url: "#", color: "bg-[#5865F2]/10 border-[#5865F2]/30 text-[#5865F2]" },
     { name: "Instagram", icon: Instagram, url: "#", color: "bg-[#E1306C]/10 border-[#E1306C]/30 text-[#E1306C]" },
     { name: "Twitter", icon: Twitter, url: "#", color: "bg-[#1DA1F2]/10 border-[#1DA1F2]/30 text-[#1DA1F2]" },
     { name: "YouTube", icon: Youtube, url: "#", color: "bg-[#FF0000]/10 border-[#FF0000]/30 text-[#FF0000]" },

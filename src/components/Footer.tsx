@@ -1,5 +1,5 @@
 
-import { Instagram, Twitter, Youtube, Discord } from 'lucide-react';
+import { Instagram, Twitter, Youtube, MessageSquare } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,7 +18,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 text-gray-400 hover:text-white hover:bg-revenant-purple/20 transition-all duration-300">
-                <Discord size={20} />
+                <MessageSquare size={20} />
               </a>
               <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 text-gray-400 hover:text-white hover:bg-revenant-purple/20 transition-all duration-300">
                 <Instagram size={20} />
