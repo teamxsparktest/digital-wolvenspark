@@ -5,6 +5,11 @@ import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
 import CareerSection from '../components/CareerSection';
 import PlayersSection from '../components/PlayersSection';
+import OwnerDetailsSection from '../components/OwnerDetailsSection';
+import GallerySection from '../components/GallerySection';
+import StatisticsSection from '../components/StatisticsSection';
+import TournamentSection from '../components/TournamentSection';
+import OGSupportersSection from '../components/OGSupportersSection';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -44,6 +49,11 @@ const Index = () => {
         <AboutSection />
         <CareerSection />
         <PlayersSection />
+        <OwnerDetailsSection />
+        <GallerySection />
+        <StatisticsSection />
+        <TournamentSection />
+        <OGSupportersSection />
       </main>
       
       {/* Footer */}

@@ -20,6 +20,11 @@ const Header = () => {
     { name: 'About', href: '#about' },
     { name: 'Career', href: '#career' },
     { name: 'Players', href: '#players' },
+    { name: 'Owner', href: '#owner' },
+    { name: 'Gallery', href: '#gallery' },
+    { name: 'Statistics', href: '#statistics' },
+    { name: 'Tournaments', href: '#tournaments' },
+    { name: 'Supporters', href: '#supporters' },
   ];
   
   return (
@@ -39,7 +44,7 @@ const Header = () => {
             </a>
           </div>
           
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -51,7 +56,7 @@ const Header = () => {
             ))}
           </nav>
           
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(true)}
               className="text-gray-300 hover:text-white"
