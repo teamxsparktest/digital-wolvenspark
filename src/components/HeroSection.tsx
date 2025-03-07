@@ -1,12 +1,14 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { ArrowDown } from 'lucide-react';
+import { useParallax } from '../utils/animationUtils';
 
 const HeroSection = () => {
   const [rotateY, setRotateY] = useState(0);
   const [scale, setScale] = useState(1);
-  const avatarRef = useRef<HTMLDivElement>(null);
+  const logoRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const backgroundParallax = useParallax(0.15);
   
   useEffect(() => {
     const interval = setInterval(() => {
@@ -30,8 +32,8 @@ const HeroSection = () => {
       const deltaX = (mouseX - centerX) / (width / 2) * 10;
       const deltaY = (mouseY - centerY) / (height / 2) * 10;
       
-      if (avatarRef.current) {
-        avatarRef.current.style.transform = `
+      if (logoRef.current) {
+        logoRef.current.style.transform = `
           perspective(1000px) 
           rotateY(${rotateY + deltaX}deg) 
           rotateX(${-deltaY}deg)
@@ -46,9 +48,10 @@ const HeroSection = () => {
   
   return (
     <section id="home" className="relative h-screen overflow-hidden flex items-center justify-center">
-      <div className="absolute inset-0 bg-revenant-darker">
-        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-        <div className="absolute inset-0 bg-gradient-radial from-revenant-purple/10 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-revenant-purple-dark">
+        <div ref={backgroundParallax} className="absolute inset-0 bg-thunder-pattern opacity-20"></div>
+        <div className="absolute inset-0 bg-wolf-pattern opacity-15"></div>
+        <div className="absolute inset-0 bg-gradient-radial from-revenant-purple/20 via-transparent to-transparent"></div>
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
@@ -57,7 +60,7 @@ const HeroSection = () => {
             <div className="inline-block px-3 py-1 rounded-full bg-revenant-purple/10 border border-revenant-purple/20 mb-4">
               <span className="text-sm uppercase tracking-wider text-revenant-purple-light">Indian Esport Organization</span>
             </div>
-            <h1 className="heading-xl mb-4">
+            <h1 className="font-orbitron heading-xl mb-4">
               <span className="block text-white">Revenant</span>
               <span className="block yellow-neon-text">XSpark</span>
             </h1>
@@ -83,7 +86,7 @@ const HeroSection = () => {
           
           <div className="lg:w-1/2 flex justify-center relative h-[300px] sm:h-[400px] md:h-[500px] w-full">
             <div 
-              ref={avatarRef} 
+              ref={logoRef} 
               className="relative w-full h-full max-w-[500px] max-h-[500px] transform-gpu"
               style={{
                 transformStyle: 'preserve-3d',
@@ -97,11 +100,9 @@ const HeroSection = () => {
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-[80%] h-[80%] rounded-full bg-revenant-purple/5 border border-revenant-purple/20 animate-float flex items-center justify-center">
-                    <img 
-                      src="https://placehold.co/400x400/121212/AF4FFE?text=RXS&font=montserrat" 
-                      alt="Revenant XSpark Avatar" 
-                      className="w-[80%] h-[80%] object-cover rounded-full neon-glow"
-                    />
+                    <div className="text-8xl md:text-9xl font-bold font-orbitron text-white neon-glow tracking-widest">
+                      RNTX
+                    </div>
                   </div>
                 </div>
               </div>

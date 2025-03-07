@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -22,6 +21,7 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 				mono: ['Space Mono', 'monospace'],
+				orbitron: ['Orbitron', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -72,7 +72,7 @@ export default {
 					darker: '#0A0A0A',
 					purple: {
 						DEFAULT: '#8B5CF6',
-						dark: '#7C3AED',
+						dark: '#330033',
 						light: '#A78BFA',
 						neon: '#AF4FFE',
 					},
