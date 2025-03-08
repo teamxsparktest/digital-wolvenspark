@@ -114,13 +114,19 @@ const ThunderBackground = () => {
       {/* Thunder pattern background */}
       <div className="absolute inset-0 bg-thunder-pattern opacity-40"></div>
       
+      {/* Team background image */}
+      <div className="absolute inset-0 bg-team-bg bg-cover bg-center opacity-80"></div>
+      
+      {/* Overlay gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-revenant-blue-dark/30"></div>
+      
       {/* Dynamic thunder flash */}
       {flash && (
         <div 
-          className="absolute inset-0 bg-revenant-purple-neon transition-opacity duration-100"
+          className="absolute inset-0 bg-revenant-blue-neon transition-opacity duration-100"
           style={{ 
             opacity: intensity,
-            boxShadow: `inset 0 0 ${Math.floor(intensity * 150)}px ${Math.floor(intensity * 100)}px rgba(175, 79, 254, ${intensity * 0.8})` 
+            boxShadow: `inset 0 0 ${Math.floor(intensity * 150)}px ${Math.floor(intensity * 100)}px rgba(0, 191, 255, ${intensity * 0.8})` 
           }}
         />
       )}

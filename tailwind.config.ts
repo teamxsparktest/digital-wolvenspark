@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -70,6 +71,12 @@ export default {
 				revenant: {
 					dark: '#121212',
 					darker: '#0A0A0A',
+					blue: {
+						DEFAULT: '#1E90FF',
+						dark: '#0000CD',
+						light: '#4169E1',
+						neon: '#00BFFF',
+					},
 					purple: {
 						DEFAULT: '#8B5CF6',
 						dark: '#330033',
@@ -104,18 +111,18 @@ export default {
 				},
 				'glow': {
 					'0%, 100%': { 
-						boxShadow: '0 0 5px rgba(175, 79, 254, 0.5), 0 0 10px rgba(175, 79, 254, 0.3)'
+						boxShadow: '0 0 5px rgba(0, 191, 255, 0.5), 0 0 10px rgba(0, 191, 255, 0.3)'
 					},
 					'50%': { 
-						boxShadow: '0 0 15px rgba(175, 79, 254, 0.8), 0 0 20px rgba(175, 79, 254, 0.5)'
+						boxShadow: '0 0 15px rgba(0, 191, 255, 0.8), 0 0 20px rgba(0, 191, 255, 0.5)'
 					}
 				},
 				'pulse-neon': {
 					'0%, 100%': { 
-						boxShadow: '0 0 5px rgba(175, 79, 254, 0.5), 0 0 10px rgba(175, 79, 254, 0.3)'
+						boxShadow: '0 0 5px rgba(0, 191, 255, 0.5), 0 0 10px rgba(0, 191, 255, 0.3)'
 					},
 					'50%': { 
-						boxShadow: '0 0 20px rgba(175, 79, 254, 0.8), 0 0 30px rgba(175, 79, 254, 0.5)'
+						boxShadow: '0 0 20px rgba(0, 191, 255, 0.8), 0 0 30px rgba(0, 191, 255, 0.5)'
 					}
 				},
 				'fade-in': {
@@ -154,6 +161,7 @@ export default {
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'hero-pattern': 'url("/hero-bg.png")',
+				'team-bg': 'url("/lovable-uploads/bdaf4bac-f6d7-4aec-ac6e-53bdf774b0b3.png")',
 			},
 		}
 	},

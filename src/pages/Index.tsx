@@ -27,12 +27,12 @@ const Index = () => {
   
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-revenant-darker flex items-center justify-center z-50">
+      <div className="fixed inset-0 bg-revenant-blue-dark flex items-center justify-center z-50">
         <div className="flex flex-col items-center">
-          <div className="w-24 h-24 rounded-full border-4 border-t-revenant-purple border-r-revenant-purple border-b-transparent border-l-transparent animate-spin mb-8"></div>
+          <div className="w-24 h-24 rounded-full border-4 border-t-revenant-blue border-r-revenant-blue border-b-transparent border-l-transparent animate-spin mb-8"></div>
           <div className="flex items-center animate-pulse">
-            <span className="text-2xl font-bold tracking-wider neon-text">REVENANT</span>
-            <span className="ml-1 text-2xl font-bold tracking-wider yellow-neon-text">XSPARK</span>
+            <span className="text-2xl font-bold tracking-wider text-revenant-blue-neon drop-shadow-[0_0_8px_rgba(0,191,255,0.7)]">REVENANT</span>
+            <span className="ml-1 text-2xl font-bold tracking-wider text-white">XSPARK</span>
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@ const Index = () => {
   }
   
   return (
-    <div className="min-h-screen overflow-x-hidden bg-revenant-purple-dark/30">
+    <div className="min-h-screen overflow-x-hidden bg-revenant-blue-dark/30">
       {/* Thunder background effect */}
       <ThunderBackground />
       
