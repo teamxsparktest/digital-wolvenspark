@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -71,12 +70,6 @@ export default {
 				revenant: {
 					dark: '#121212',
 					darker: '#0A0A0A',
-					blue: {
-						DEFAULT: '#1E90FF',
-						dark: '#0000CD',
-						light: '#4169E1',
-						neon: '#00BFFF',
-					},
 					purple: {
 						DEFAULT: '#8B5CF6',
 						dark: '#330033',
@@ -147,21 +140,20 @@ export default {
 				}
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.3s ease-out',
-				'accordion-up': 'accordion-up 0.3s ease-out',
+				'accordion-down': 'accordion-down 0.2s ease-out',
+				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite',
-				'glow': 'glow 4s ease-in-out infinite',
-				'pulse-neon': 'pulse-neon 3s ease-in-out infinite',
-				'fade-in': 'fade-in 0.8s ease-out forwards',
-				'fade-in-left': 'fade-in-left 0.8s ease-out forwards',
-				'fade-in-right': 'fade-in-right 0.8s ease-out forwards',
-				'rotate-slow': 'rotate-slow 30s linear infinite',
-				'bounce-small': 'bounce-small 3s ease-in-out infinite',
+				'glow': 'glow 3s ease-in-out infinite',
+				'pulse-neon': 'pulse-neon 2s ease-in-out infinite',
+				'fade-in': 'fade-in 0.6s ease-out forwards',
+				'fade-in-left': 'fade-in-left 0.6s ease-out forwards',
+				'fade-in-right': 'fade-in-right 0.6s ease-out forwards',
+				'rotate-slow': 'rotate-slow 20s linear infinite',
+				'bounce-small': 'bounce-small 2s ease-in-out infinite',
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'hero-pattern': 'url("/hero-bg.png")',
-				'team-bg': 'url("/lovable-uploads/bdaf4bac-f6d7-4aec-ac6e-53bdf774b0b3.png")',
 			},
 		}
 	},

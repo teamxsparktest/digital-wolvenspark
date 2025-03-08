@@ -48,8 +48,9 @@ const HeroSection = () => {
   
   return (
     <section id="home" className="relative h-screen overflow-hidden flex items-center justify-center">
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-revenant-purple-dark">
         <div ref={backgroundParallax} className="absolute inset-0 bg-thunder-pattern opacity-20"></div>
+        <div className="absolute inset-0 bg-wolf-pattern opacity-15"></div>
         <div className="absolute inset-0 bg-gradient-radial from-revenant-purple/20 via-transparent to-transparent"></div>
       </div>
       
@@ -57,26 +58,26 @@ const HeroSection = () => {
         <div ref={containerRef} className="flex flex-col lg:flex-row items-center justify-between gap-12 w-full">
           <div className="lg:w-1/2 text-center lg:text-left animate-fade-in">
             <div className="inline-block px-3 py-1 rounded-full bg-revenant-purple/10 border border-revenant-purple/20 mb-4">
-              <span className="text-sm uppercase tracking-wider text-purple-300">Indian Esport Organization</span>
+              <span className="text-sm uppercase tracking-wider text-revenant-purple-light">Indian Esport Organization</span>
             </div>
             <h1 className="font-orbitron heading-xl mb-4">
               <span className="block text-white">Revenant</span>
-              <span className="block text-revenant-purple-neon drop-shadow-[0_0_8px_rgba(175,79,254,0.7)]">XSpark</span>
+              <span className="block yellow-neon-text">XSpark</span>
             </h1>
             <p className="paragraph mb-8 max-w-xl">
               Dominating the Indian esports scene with precision, strategy, and relentless determination.
             </p>
-            <p className="text-2xl font-bold mb-8 text-revenant-purple-neon drop-shadow-[0_0_8px_rgba(175,79,254,0.7)]">#wolvenspark</p>
+            <p className="text-2xl font-bold mb-8 neon-text">#wolvenspark</p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <a 
                 href="#about" 
-                className="px-6 py-3 rounded-lg bg-revenant-purple hover:bg-revenant-purple-dark text-white font-medium transition-all duration-500 shadow-[0_0_15px_rgba(175,79,254,0.3),0_0_30px_rgba(175,79,254,0.1)] hover:shadow-[0_0_20px_rgba(175,79,254,0.5),0_0_40px_rgba(175,79,254,0.2)]"
+                className="px-6 py-3 rounded-lg bg-revenant-purple hover:bg-revenant-purple-dark text-white font-medium transition-all duration-300 neon-glow hover:shadow-[0_0_20px_rgba(175,79,254,0.5),0_0_40px_rgba(175,79,254,0.2)]"
               >
                 Discover More
               </a>
               <a 
                 href="#career" 
-                className="px-6 py-3 rounded-lg bg-transparent border border-revenant-purple/30 text-white font-medium hover:border-revenant-purple/70 transition-all duration-500"
+                className="px-6 py-3 rounded-lg bg-transparent border border-revenant-purple/30 text-white font-medium hover:border-revenant-purple/70 transition-all duration-300"
               >
                 Our Achievements
               </a>
@@ -99,7 +100,7 @@ const HeroSection = () => {
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-[80%] h-[80%] rounded-full bg-revenant-purple/5 border border-revenant-purple/20 animate-float flex items-center justify-center">
-                    <div className="text-8xl md:text-9xl font-bold font-orbitron text-white shadow-[0_0_15px_rgba(175,79,254,0.3),0_0_30px_rgba(175,79,254,0.1)] tracking-widest">
+                    <div className="text-8xl md:text-9xl font-bold font-orbitron text-white neon-glow tracking-widest">
                       RNTX
                     </div>
                   </div>
@@ -110,7 +111,7 @@ const HeroSection = () => {
         </div>
         
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-small">
-          <a href="#about" className="flex flex-col items-center text-purple-300 hover:text-white transition-colors duration-500">
+          <a href="#about" className="flex flex-col items-center text-gray-400 hover:text-white transition-colors">
             <span className="text-sm uppercase tracking-wider mb-2">Scroll Down</span>
             <ArrowDown size={20} />
           </a>

@@ -53,7 +53,7 @@ const Footer = () => {
         
         <div className="pt-10 mt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            &copy; {currentYear} Revenant XSpark. All rights reserved. <span className="block md:inline mt-1 md:mt-0 md:ml-1">This is a fan-made website.</span>
+            &copy; {currentYear} Revenant XSpark. All rights reserved.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-500 hover:text-white text-sm transition-all duration-300">Privacy Policy</a>
