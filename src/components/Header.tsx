@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -21,10 +20,9 @@ const Header = () => {
     { name: 'Career', href: '#career' },
     { name: 'Players', href: '#players' },
     { name: 'Valorant', href: '#valorant' },
+    { name: 'BGMI', href: '#bgmi' },
     { name: 'Owner', href: '#owner' },
     { name: 'Gallery', href: '#gallery' },
-    { name: 'Statistics', href: '#statistics' },
-    { name: 'Tournaments', href: '#tournaments' },
     { name: 'Supporters', href: '#supporters' },
   ];
   
