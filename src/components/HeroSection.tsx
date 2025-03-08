@@ -1,50 +1,10 @@
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { ArrowDown } from 'lucide-react';
 import { useParallax } from '../utils/animationUtils';
 
 const HeroSection = () => {
-  const [rotateY, setRotateY] = useState(0);
-  const [scale, setScale] = useState(1);
-  const logoRef = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
   const backgroundParallax = useParallax(0.15);
-  
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setRotateY((prev) => prev + 0.5);
-    }, 50);
-    
-    return () => clearInterval(interval);
-  }, []);
-  
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!containerRef.current) return;
-      
-      const { left, top, width, height } = containerRef.current.getBoundingClientRect();
-      const centerX = left + width / 2;
-      const centerY = top + height / 2;
-      
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
-      
-      const deltaX = (mouseX - centerX) / (width / 2) * 10;
-      const deltaY = (mouseY - centerY) / (height / 2) * 10;
-      
-      if (logoRef.current) {
-        logoRef.current.style.transform = `
-          perspective(1000px) 
-          rotateY(${rotateY + deltaX}deg) 
-          rotateX(${-deltaY}deg)
-          scale3d(${scale}, ${scale}, ${scale})
-        `;
-      }
-    };
-    
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [rotateY, scale]);
   
   return (
     <section id="home" className="relative h-screen overflow-hidden flex items-center justify-center">
@@ -55,7 +15,7 @@ const HeroSection = () => {
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-        <div ref={containerRef} className="flex flex-col lg:flex-row items-center justify-between gap-12 w-full">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 w-full">
           <div className="lg:w-1/2 text-center lg:text-left animate-fade-in">
             <div className="inline-block px-3 py-1 rounded-full bg-revenant-purple/10 border border-revenant-purple/20 mb-4">
               <span className="text-sm uppercase tracking-wider text-revenant-purple-light">Indian Esport Organization</span>
@@ -84,28 +44,14 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="lg:w-1/2 flex justify-center relative h-[300px] sm:h-[400px] md:h-[500px] w-full">
-            <div 
-              ref={logoRef} 
-              className="relative w-full h-full max-w-[500px] max-h-[500px] transform-gpu"
-              style={{
-                transformStyle: 'preserve-3d',
-                transform: `perspective(1000px) rotateY(${rotateY}deg) scale3d(${scale}, ${scale}, ${scale})`,
-              }}
-            >
+          <div className="lg:w-1/2 flex justify-center items-center relative">
+            <div className="relative w-full max-w-[500px] flex justify-center items-center">
               <div className="absolute inset-0 rounded-full bg-revenant-purple/10 blur-3xl animate-pulse-neon"></div>
-              <div className="relative w-full h-full">
-                <div className="absolute inset-0 rounded-full animate-rotate-slow">
-                  <div className="w-full h-full rounded-full border-2 border-dotted border-revenant-purple/30 animate-rotate-slow"></div>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-[80%] h-[80%] rounded-full bg-revenant-purple/5 border border-revenant-purple/20 animate-float flex items-center justify-center">
-                    <div className="text-8xl md:text-9xl font-bold font-orbitron text-white neon-glow tracking-widest">
-                      RNTX
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <img 
+                src="/lovable-uploads/b7b8bca6-24eb-4ca1-8ba4-fcd027346b07.png" 
+                alt="Revenant XSpark Logo" 
+                className="w-full max-w-[400px] relative z-10 animate-float"
+              />
             </div>
           </div>
         </div>
