@@ -20,6 +20,7 @@ const Header = () => {
     { name: 'About', href: '#about' },
     { name: 'Career', href: '#career' },
     { name: 'Players', href: '#players' },
+    { name: 'Valorant', href: '#valorant' },
     { name: 'Owner', href: '#owner' },
     { name: 'Gallery', href: '#gallery' },
     { name: 'Statistics', href: '#statistics' },
@@ -49,7 +50,9 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-white hover:neon-text transition-all duration-300 text-sm uppercase tracking-wider"
+                className={`text-gray-300 hover:text-white hover:neon-text transition-all duration-300 text-sm uppercase tracking-wider ${
+                  link.name === 'Valorant' ? 'text-revenant-purple-light font-semibold' : ''
+                }`}
               >
                 {link.name}
               </a>
@@ -90,7 +93,9 @@ const Header = () => {
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="text-gray-300 hover:text-white hover:neon-text transition-all duration-300 text-2xl uppercase tracking-wider"
+              className={`text-gray-300 hover:text-white hover:neon-text transition-all duration-300 text-2xl uppercase tracking-wider ${
+                link.name === 'Valorant' ? 'text-revenant-purple-light font-semibold' : ''
+              }`}
             >
               {link.name}
             </a>

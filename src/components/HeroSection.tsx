@@ -48,7 +48,7 @@ const HeroSection = () => {
             <div className="relative w-full max-w-[500px] flex justify-center items-center">
               <div className="absolute inset-0 rounded-full bg-revenant-purple/10 blur-3xl animate-pulse-neon"></div>
               <img 
-                src="/lovable-uploads/b7b8bca6-24eb-4ca1-8ba4-fcd027346b07.png" 
+                src="/lovable-uploads/98aae1d5-db90-4cd2-9c46-a2b97f3c052c.png" 
                 alt="Revenant XSpark Logo" 
                 className="w-full max-w-[400px] relative z-10 animate-float"
               />

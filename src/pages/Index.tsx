@@ -5,6 +5,7 @@ import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
 import CareerSection from '../components/CareerSection';
 import PlayersSection from '../components/PlayersSection';
+import ValorantSection from '../components/ValorantSection';
 import OwnerDetailsSection from '../components/OwnerDetailsSection';
 import GallerySection from '../components/GallerySection';
 import StatisticsSection from '../components/StatisticsSection';
@@ -49,6 +50,7 @@ const Index = () => {
         <AboutSection />
         <CareerSection />
         <PlayersSection />
+        <ValorantSection />
         <OwnerDetailsSection />
         <GallerySection />
         <StatisticsSection />
