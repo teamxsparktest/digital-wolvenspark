@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useScrollReveal } from '../utils/animationUtils';
 import { X, Instagram, Youtube } from 'lucide-react';
@@ -116,7 +115,7 @@ const PlayersSection = () => {
       notableMedia: ["This Might Be the Worst Podcast Ever (January 22, 2025)"],
       instagram: { handle: "txsarang", url: "https://www.instagram.com/txsarang" },
       youtube: { handle: "TX Sarang Jod", url: "https://youtube.com/@txsarangjod" },
-      image: "https://placehold.co/300x300/121212/AF4FFE?text=S&font=montserrat" 
+      image: "/lovable-uploads/de19c27f-76bc-4cae-b0c5-0718375b0253.png" 
     },
     { 
       id: "SPRAYGOD", 
@@ -128,7 +127,7 @@ const PlayersSection = () => {
       notableMedia: ["THE DREAM - Team X Spark BGIS 24 CHAMPIONS Documentary (September 22, 2024)"],
       instagram: { handle: "tx_spraygod", url: "https://www.instagram.com/tx_spraygod" },
       youtube: { handle: "TXS Spraygod", url: "https://youtube.com/@TXSSpraygod" },
-      image: "https://placehold.co/300x300/121212/AF4FFE?text=SG&font=montserrat" 
+      image: "/lovable-uploads/e63e6426-7163-430b-8ab5-bbe3c26bd517.png" 
     },
     { 
       id: "Shadow7", 
@@ -142,7 +141,7 @@ const PlayersSection = () => {
         "THE DREAM - Team X Spark BGIS 24 CHAMPIONS Documentary (September 22, 2024)",
         "This Might Be the Worst Podcast Ever (January 22, 2025)"
       ],
-      image: "https://placehold.co/300x300/121212/AF4FFE?text=S7&font=montserrat" 
+      image: "/lovable-uploads/7da80c8c-9ce3-4a75-ae9a-13d1d197456a.png" 
     },
     { 
       id: "Jokerr", 
@@ -157,7 +156,7 @@ const PlayersSection = () => {
       ],
       instagram: { handle: "txjoker09", url: "https://www.instagram.com/txjoker09" },
       youtube: { handle: "TX Joker09", url: "https://youtube.com/@TXJoker09" },
-      image: "https://placehold.co/300x300/121212/AF4FFE?text=J&font=montserrat" 
+      image: "/lovable-uploads/c0758d19-a010-417c-bb96-42e9eb868cd7.png" 
     },
     { 
       id: "Syed", 
