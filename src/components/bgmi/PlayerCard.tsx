@@ -32,6 +32,17 @@ const PlayerCard = ({ player, onClick }: PlayerCardProps) => {
             <p className="text-sm font-semibold">{player.stats?.["K/D Ratio"] || "-"}</p>
           </div>
         </div>
+
+        <div className="mt-2 grid grid-cols-2 gap-2">
+          <div>
+            <p className="text-xs text-gray-400">Headshot %</p>
+            <p className="text-sm font-semibold">{player.stats?.["Headshot %"] || "-"}</p>
+          </div>
+          <div>
+            <p className="text-xs text-gray-400">Revivals</p>
+            <p className="text-sm font-semibold">{player.stats?.Revival || "-"}</p>
+          </div>
+        </div>
       </div>
     </div>
   );
