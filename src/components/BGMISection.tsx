@@ -1,7 +1,6 @@
-
 import { useState } from 'react';
 import { useScrollReveal } from '../utils/animationUtils';
-import { X, Trophy, User, BarChart2, Calendar } from 'lucide-react';
+import { X, Trophy, User, BarChart2, Calendar, Instagram, Youtube } from 'lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
@@ -586,12 +585,12 @@ const BGMISection = () => {
                       <div className="mb-4">
                         <span className={`inline-block px-3 py-1 rounded-lg text-sm ${
                           tournament.placement === '1st' 
-                            ? 'bg-revenant-yellow/10 text-revenant-yellow border border-revenant-yellow/30' 
+                            ? 'bg-revenant-yellow/10 text-revenant-yellow' 
                             : tournament.placement === '2nd'
-                              ? 'bg-white/10 text-white border border-white/30'
+                              ? 'bg-white/10 text-white'
                               : tournament.placement === '3rd'
-                                ? 'bg-orange-500/10 text-orange-400 border border-orange-500/30'
-                                : 'bg-white/5 text-gray-300 border border-white/10'
+                                ? 'bg-orange-500/10 text-orange-400'
+                                : 'bg-white/5 text-gray-300'
                         }`}>
                           {tournament.placement} Place
                         </span>
