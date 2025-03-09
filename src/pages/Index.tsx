@@ -8,8 +8,9 @@ import PlayersSection from '../components/PlayersSection';
 import ValorantSection from '../components/ValorantSection';
 import OwnerDetailsSection from '../components/OwnerDetailsSection';
 import GallerySection from '../components/GallerySection';
+import StatisticsSection from '../components/StatisticsSection';
+import TournamentSection from '../components/TournamentSection';
 import OGSupportersSection from '../components/OGSupportersSection';
-import BGMISection from '../components/BGMISection';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -49,10 +50,11 @@ const Index = () => {
         <AboutSection />
         <CareerSection />
         <PlayersSection />
-        <BGMISection />
         <ValorantSection />
         <OwnerDetailsSection />
         <GallerySection />
+        <StatisticsSection />
+        <TournamentSection />
         <OGSupportersSection />
       </main>
       
